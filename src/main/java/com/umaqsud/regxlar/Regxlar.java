@@ -19,6 +19,7 @@ package com.umaqsud.regxlar;
 import java.util.List;
 
 import com.umaqsud.regxlar.random.RandomGenerator;
+import com.umaqsud.regxlar.random.SeedRandomGenerator;
 
 import dk.brics.automaton.Automaton;
 import dk.brics.automaton.RegExp;
@@ -27,7 +28,7 @@ import dk.brics.automaton.Transition;
 
 public class Regxlar {
 
-    private int DEFAULT_MAX_LENGTH = 4000;
+    public static int DEFAULT_MAX_LENGTH = 4000;
 
     private RegExp regExp;
     private Automaton automaton;
@@ -65,5 +66,9 @@ public class Regxlar {
 
     public String generateNext(RandomGenerator randomGenerator) {
         return generateNext(randomGenerator, DEFAULT_MAX_LENGTH);
+    }
+
+    public String generateNext() {
+        return generateNext(new SeedRandomGenerator(Math.random()), DEFAULT_MAX_LENGTH);
     }
 }
