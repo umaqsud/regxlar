@@ -40,6 +40,7 @@ Let's take a simple regular expression for email addresses: `[a-z0-9]{5,10}\\.[a
   String random2 = regxlar.generateNext(new SeedRandomGenerator(seed));
   System.out.println(random1);
   System.out.println(random2);
+  System.out.println(random1.equals(random2));
   
   // it prints
   // a80w2n.WC92MB3@bil03i2hs.pnqy
