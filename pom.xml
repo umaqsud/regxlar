@@ -25,7 +25,7 @@ limitations under the License.
 
 	<name>Regxlar</name>
 	<description>A Java library for repeatable generating strings at random from a regular grammar.</description>
-	<url>https://github.com/umaqsud/regulargen</url>
+	<url>https://github.com/umaqsud/regxlar</url>
 
 	<inceptionYear>2014</inceptionYear>
 
