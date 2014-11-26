@@ -55,31 +55,31 @@ Let's take a simple regular expression for email addresses: `[a-z0-9]{5,10}\\.[a
 Regxlar does not support all valid regular expressions. Future versions might support further regular expression syntaxes. Regular expressions are built from the following abstract syntax:
 
 ```
-regexp	      ::=	unionexp		
+regexp        ::=	unionexp		
               | 			
-unionexp	    ::=	interexp | unionexp	(union)	
+unionexp      ::=	interexp | unionexp	(union)	
               |	interexp		
-interexp	    ::=	concatexp & interexp	(intersection)	[OPTIONAL]
+interexp      ::=	concatexp & interexp	(intersection)	[OPTIONAL]
               |	concatexp		
-concatexp	    ::=	repeatexp concatexp	(concatenation)	
+concatexp     ::=	repeatexp concatexp	(concatenation)	
               |	repeatexp		
-repeatexp	    ::=	repeatexp ?	(zero or one occurrence)	
+repeatexp     ::=	repeatexp ?	(zero or one occurrence)	
               |	repeatexp *	(zero or more occurrences)	
               |	repeatexp +	(one or more occurrences)	
               |	repeatexp {n}	(n occurrences)	
               |	repeatexp {n,}	(n or more occurrences)	
               |	repeatexp {n,m}	(n to m occurrences, including both)	
               |	complexp		
-complexp	    ::=	~ complexp	(complement)	[OPTIONAL]
+complexp      ::=	~ complexp	(complement)	[OPTIONAL]
               |	charclassexp		
-charclassexp	::=	[ charclasses ]	(character class)	
+charclassexp  ::=	[ charclasses ]	(character class)	
               |	[^ charclasses ]	(negated character class)	
               |	simpleexp		
-charclasses	  ::=	charclass charclasses		
+charclasses   ::=	charclass charclasses		
               |	charclass		
-charclass	    ::=	charexp - charexp	(character range, including end-points)	
+charclass     ::=	charexp - charexp	(character range, including end-points)	
               |	charexp		
-simpleexp	    ::=	charexp		
+simpleexp     ::=	charexp		
               |	.	(any single character)	
               |	#	(the empty language)	[OPTIONAL]
               |	@	(any string)	[OPTIONAL]
