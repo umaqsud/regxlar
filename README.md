@@ -66,28 +66,28 @@ Regxlar does not support all valid regular expressions. Future versions might su
  repeatexp    ::=	repeatexp ?									(zero or one occurrence)	
               |   repeatexp *									(zero or more occurrences)	
               |   repeatexp +									(one or more occurrences)	
-              |   repeatexp {n}								(n occurrences)	
+              |   repeatexp {n}								    (n occurrences)	
               |   repeatexp {n,}								(n or more occurrences)	
               |   repeatexp {n,m}								(n to m occurrences, including both)	
               |   complexp		
  complexp     ::=	~ complexp									(complement)							[OPTIONAL]
               |	  charclassexp		
  charclassexp ::=	[ charclasses ]								(character class)	
-              |	  [^ charclasses ]							(negated character class)	
+              |	  [^ charclasses ]							    (negated character class)	
               |	  simpleexp		
  charclasses  ::=	charclass charclasses		
               |	  charclass		
  charclass    ::=	charexp - charexp							(character range, including end-points)	
               |	  charexp		
  simpleexp    ::=	charexp		
-              |	  .											(any single character)	
-              |	  #											(the empty language)					[OPTIONAL]
-              |	  @											(any string)							[OPTIONAL]
-              |	  " <Unicode string without double-quotes> "	(a string)	
+              |	  .											    (any single character)	
+              |	  #											    (the empty language)					[OPTIONAL]
+              |	  @											    (any string)							[OPTIONAL]
+              |	  " <Unicode string without double-quotes> "    (a string)	
               |	  ( )											(the empty string)	
-              |	  ( unionexp )								(precedence override)	
-              |	  < <identifier> >							(named automaton)						[OPTIONAL]
-              |	  <n-m>										(numerical interval)					[OPTIONAL]
+              |	  ( unionexp )								    (precedence override)	
+              |	  < <identifier> >							    (named automaton)						[OPTIONAL]
+              |	  <n-m>										    (numerical interval)					[OPTIONAL]
  charexp      ::=	<Unicode character>							(a single non-reserved character)	
               |	  \ <Unicode character> 						(a single character)
 ```
