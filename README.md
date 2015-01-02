@@ -59,7 +59,7 @@ Regxlar does not support all valid regular expressions. Future versions might su
               |			
  unionexp     ::= interexp | unionexp							(union)	
               |   interexp		
- interexp     ::= concatexp & interexp						(intersection)							[OPTIONAL]
+ interexp     ::= concatexp & interexp						    (intersection)							[OPTIONAL]
               |   concatexp		
  concatexp    ::= repeatexp concatexp							(concatenation)	
               |   repeatexp		
@@ -77,7 +77,7 @@ Regxlar does not support all valid regular expressions. Future versions might su
               |	  simpleexp		
  charclasses  ::= charclass charclasses		
               |	  charclass		
- charclass    ::= charexp - charexp							(character range, including end-points)	
+ charclass    ::= charexp - charexp							    (character range, including end-points)	
               |	  charexp		
  simpleexp    ::= charexp		
               |	  .											    (any single character)	
